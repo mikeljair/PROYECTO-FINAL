@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rain(){
+            let amount = 10;
+            let body = document.querySelector('body');
+            let h = 0;
+            while (h < amount) {
+                let drop = document.createElement('h');
+                let size = Math.random() * 5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 5;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay + 's';
+                drop.style.animationDuration =1 + duration + 's';
+                body.appendChild(drop);
+                h++
+            }
+        }
+        rain();
+    </script>
+    <br>
+        <div class="wave">
+            <span style="--item:1">C</span>
+            <span style="--item:2">A</span>
+            <span style="--item:3">L</span>
+            <span style="--item:4">C</span>
+            <span style="--item:5">U</span>
+            <span style="--item:6">L</span>
+            <span style="--item:7">A</span>
+            <span style="--item:8">D</span>
+            <span style="--item:9">O</span>
+            <span style="--item:10">R</span>
+            <span style="--item:11">A</span>
+        </div>
+        <br>
+        <br>
+        
+    <form action="">
+                <input id="result">                    
+        <div class="container">
+                    <div class="btn"><a href="#" onclick="cal.divisores()" >Divisores</a></div>
+                    <div class="btn"><a href="#" onclick="cal.invertir()" >INvertir Número</a></div>
+                    <div class="btn"><a href="#" onclick="cal.primo()" >Primo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.perfecto()" >Perfecto</a></div>
+                    <div class="btn"><a href="#" onclick="cal.fibonacci()" >Fibonacci</a></div>
+                </div>
+                <div class="container">
+                    <div class="btn"><a href="#" onclick="cal.base10_2()" >Base 10 a 2</a></div>
+                    <div class="btn"><a href="#" onclick="cal.base10_16()" >Base 10 a 16</a></div>
+                    <div class="btn"><a href="#" onclick="cal.base10_8()" >Base 10 a 8</a></div>
+                    <div class="btn"><a href="#" onclick="cal.base2_10()" >Base 2 a 10</a></div>
+                    <div class="btn"><a href="#" onclick="cal.base2_16()" >Base 2 a 16</a></div>
+                </div>
+                <div class="container">
+                    <div class="btn"><a href="#" onclick="cal.contar_palabras()" >Contar Palabras</a></div>
+                    <div class="btn"><a href="#" onclick="cal.palindromo()" >Palindromo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.invertir_frase()" >Invertir Frase</a></div>
+                    <div class="btn"><a href="#" onclick="cal.contar_caracteres()" >Contar Caracteres</a></div>
+                    <div class="btn"><a href="#" onclick="cal.buscar_cadena()" >Buscar Cadena</a></div>
+                </div>
+                <div class="container">
+                    <div class="btn"><a href="#" onclick="cal.mayor()" >Mayor Arreglo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.promedio()" >Promedio Arreglo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.buscar_arreglo()" >Buscar Arreglo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.eliminar()" >Eliminar Elemento Arreglo</a></div>
+                    <div class="btn"><a href="#" onclick="cal.insertar()" >Insertar Elemento Arreglo</a></div>
+                </div>
+                <div class="container">
+                    <div class="button-borders">
+                        <button class="primary-button" type="reset">LIMPIAR</button>
+                      </div>
+                </div>
+        </div>  
+        
+    </form>
+   <script src="./ejercicios.js"></script>
+</body>
+</html>
